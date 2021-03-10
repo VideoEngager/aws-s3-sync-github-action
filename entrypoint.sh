@@ -2,10 +2,6 @@
 
 set -e
 
-echo $AWS_S3_BUCKET
-echo $AWS_ACCESS_KEY
-echo $AWS_SECRET_KEY
-
 if [ -z "$AWS_ACCESS_KEY" ]; then
   echo "AWS_ACCESS_KEY is NOT set. Pls go to repo settings and add it. Will exit now."
   exit 1
@@ -57,8 +53,7 @@ EOF
 
 sh -c "aws s3 sync ${SOURCE_DIRECTORY} s3://${AWS_S3_BUCKET}/${DESTINATION_DIRECTORY} \
               --profile github-action \
-              --cache-control max-age=${MAX_AGE},public
-              --no-progress"
+              --cache-control max-age=${MAX_AGE},public"
 
 aws configure --profile github-action <<-EOF > /dev/null 2>&1
 null

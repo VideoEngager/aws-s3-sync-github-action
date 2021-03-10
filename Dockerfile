@@ -6,10 +6,8 @@ LABEL "com.github.actions.icon"="refresh-cw"
 LABEL "com.github.actions.color"="green"
 
 LABEL version="0.0.1"
-LABEL maintainer="Zlatko Petrov <zlatko@videoengager.com>"
+LABEL maintainer="VideoEngager <contact@videoengager.com>"
 
-
-ENV AWSCLI_VERSION='2.1.30'
 
 RUN pip install --quiet --no-cache-dir awscli
 
