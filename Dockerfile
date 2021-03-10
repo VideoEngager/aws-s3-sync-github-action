@@ -11,7 +11,7 @@ LABEL maintainer="Zlatko Petrov <zlatko@videoengager.com>"
 
 ENV AWSCLI_VERSION='2.1.30'
 
-RUN pip install --quiet --no-cache-dir awscli==${AWSCLI_VERSION}
+RUN pip install --quiet --no-cache-dir awscli
 
 ADD entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
