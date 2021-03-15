@@ -50,6 +50,7 @@ else
   if [ -z "$CLOUDFRONT_DISTRIBUTION_ID" ]; then
     echo "Cloudfront invalidation has been seet to true, but a cloudfront distribution id has not been provided. Pls either set IS_CACHE_INVALIDATION_REQUIRED = false or provide ID for the cloudfront distribution to be invalidated."
     exit 1
+  fi
 fi
 
 
